@@ -1,0 +1,4 @@
+---
+- name: install jq
+  environment: proxy_env
+  get_url: url=http://stedolan.github.io/jq/download/linux64/jq dest=/usr/bin mode=0755
