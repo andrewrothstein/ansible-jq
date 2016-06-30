@@ -1,0 +1,3 @@
+---
+jq_bin : 'jq-{{jq_platform}}'
+jq_url : '{{jq_mirror}}/jq-{{jq_ver}}/{{jq_bin}}'

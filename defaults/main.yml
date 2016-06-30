@@ -1,0 +1,5 @@
+---
+jq_mirror : 'https://github.com/stedolan/jq/releases/download'
+jq_ver : '1.5'
+jq_platform : linux64
+jq_install_dir : /usr/local/bin

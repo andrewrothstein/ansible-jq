@@ -1,4 +1,16 @@
 ---
 - name: install jq
-  environment: proxy_env
-  get_url: url=http://stedolan.github.io/jq/download/linux64/jq dest=/usr/bin mode=0755
+  get_url: >
+    url={{jq_url}}
+    dest={{jq_install_dir}}/{{jq_bin}}
+    owner=root
+    group=root
+    mode=0755
+
+- name: link jq
+  file: >-
+    src={{jq_install_dir}}/{{jq_bin}}
+    dest={{jq_install_dir}}/jq
+    state=link
+    owner=root
+    group=root
