@@ -1,16 +1,24 @@
 ---
-- name: install jq
-  get_url: >
-    url={{jq_url}}
-    dest={{jq_install_dir}}/{{jq_bin}}
-    owner=root
-    group=root
-    mode=0755
+- name: make versioned dir for jq
+  become: yes
+  become_user: root
+  file:
+    path: '{{jq_target_dir}}'
+    state: directory
+    mode: 0755
+
+- name: download jq
+  become: yes
+  become_user: root
+  get_url:
+    url: '{{jq_url}}'
+    dest: '{{jq_target_dir}}/{{jq_bin}}'
+    mode: 0755
 
 - name: link jq
-  file: >-
-    src={{jq_install_dir}}/{{jq_bin}}
-    dest={{jq_install_dir}}/jq
-    state=link
-    owner=root
-    group=root
+  become: yes
+  become_user: root
+  file:
+    src: '{{jq_target_dir}}/{{jq_bin}}'
+    dest: '{{jq_install_dir}}/jq'
+    state: link
