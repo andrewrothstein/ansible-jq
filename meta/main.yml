@@ -15,13 +15,18 @@ galaxy_info:
         - 23
         - 24
         - 25
+        - 26
+        - 27
+        - 28
     - name: Ubuntu
       versions:
         - trusty
         - xenial
+        - bionic
     - name: Debian
       versions:
         - jessie
+        - stretch
     - name: Alpine
       verisions:
         - all
@@ -29,4 +34,3 @@ galaxy_info:
     - development
 
 dependencies: []
-  
