@@ -3,7 +3,7 @@
   become: yes
   become_user: root
   file:
-    path: '{{jq_target_dir}}'
+    path: '{{ jq_target_dir }}'
     state: directory
     mode: 0755
 
@@ -11,14 +11,14 @@
   become: yes
   become_user: root
   get_url:
-    url: '{{jq_url}}'
-    dest: '{{jq_target_dir}}/{{jq_bin}}'
+    url: '{{ jq_url }}'
+    dest: '{{ jq_target_dir }}/{{ jq_bin }}'
     mode: 0755
 
 - name: link jq
   become: yes
   become_user: root
   file:
-    src: '{{jq_target_dir}}/{{jq_bin}}'
-    dest: '{{jq_install_dir}}/jq'
+    src: '{{ jq_target_dir }}/{{ jq_bin }}'
+    dest: '{{ jq_install_dir }}/jq'
     state: link
