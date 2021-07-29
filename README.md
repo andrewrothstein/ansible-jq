@@ -1,6 +1,6 @@
 andrewrothstein.jq
 ==================
-[![Build Status](https://travis-ci.org/andrewrothstein/ansible-jq.svg?branch=master)](https://travis-ci.org/andrewrothstein/ansible-jq)
+![Build Status](https://github.com/andrewrothstein/ansible-jq/actions/workflows/build.yml/badge.svg)
 
 Installs [jq](https://stedolan.github.io/jq/).
 
