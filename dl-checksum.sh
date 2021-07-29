@@ -20,7 +20,7 @@ dl()
 
 dl_ver() {
     ver=$1
-    printf "  '%s'\n" $ver
+    printf "  '%s':\n" $ver
     dl $ver linux32
     dl $ver linux64
     dl $ver osx-amd64

@@ -5,7 +5,7 @@ jq_platform: linux64
 jq_install_dir: /usr/local/bin
 
 jq_checksums:
-  '1.5'
+  '1.5':
     # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux32
     linux32: sha256:ab440affb9e3f546cf0d794c0058543eeac920b0cd5dff660a2948b970beb632
     # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
@@ -16,7 +16,7 @@ jq_checksums:
     win32: sha256:1860c77bc2816b74f91705b84c7fa0dad3a062b355f021aa8c8e427e388e23fc
     # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-win64.exe
     win64: sha256:ebecd840ba47efbf66822868178cc721a151060937f7ac406e3d31bd015bde94
-  '1.6'
+  '1.6':
     # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux32
     linux32: sha256:319af6123aaccb174f768a1a89fb586d471e891ba217fe518f81ef05af51edd9
     # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
