@@ -1,6 +1,6 @@
 ---
 - name: make versioned dir for jq
-  become: yes
+  become: true
   become_user: root
   file:
     path: '{{ jq_target_dir }}'
@@ -8,7 +8,7 @@
     mode: 0755
 
 - name: download jq
-  become: yes
+  become: true
   become_user: root
   get_url:
     url: '{{ jq_url }}'
@@ -16,7 +16,7 @@
     mode: 0755
 
 - name: link jq
-  become: yes
+  become: true
   become_user: root
   file:
     src: '{{ jq_target_dir }}/{{ jq_bin }}'
