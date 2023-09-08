@@ -1,5 +1,5 @@
 ---
-- name: make versioned dir for jq
+- name: mkdir {{ jq_target_dir }}
   become: true
   become_user: root
   file:
@@ -7,18 +7,19 @@
     state: directory
     mode: 0755
 
-- name: download jq
+- name: downloading {{ jq_url }} to {{ jq_exe }}
   become: true
   become_user: root
   get_url:
     url: '{{ jq_url }}'
-    dest: '{{ jq_target_dir }}/{{ jq_bin }}'
+    dest: '{{ jq_exe }}'
+    checksum: '{{ jq_checksum }}'
     mode: 0755
 
-- name: link jq
+- name: linking {{ jq_link }} to {{ jq_exe }}
   become: true
   become_user: root
   file:
-    src: '{{ jq_target_dir }}/{{ jq_bin }}'
-    dest: '{{ jq_install_dir }}/jq'
+    src: '{{ jq_exe }}'
+    dest: '{{ jq_link }}'
     state: link

@@ -1,6 +1,6 @@
 ---
 jq_mirror: https://github.com/stedolan/jq/releases/download
-jq_ver: '1.6'
+jq_ver: '1.7'
 jq_platform: linux64
 jq_install_dir: /usr/local/bin
 
@@ -27,3 +27,14 @@ jq_checksums:
     win32: sha256:0012cb4c0eb6eaf97b842e676e423a69a8fea95055d93830551b4a5a54494bd8
     # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe
     win64: sha256:a51d36968dcbdeabb3142c6f5cf9b401a65dc3a095f3144bd0c118d5bb192753
+  '1.7':
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux32
+    linux32: sha256:6e8f12833541c5cff94c556d72c12585821fb68bcf09acef56c854d107fd5a6e
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux64
+    linux64: sha256:2f312b9587b1c1eddf3a53f9a0b7d276b9b7b94576c85bda22808ca950569716
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-osx-amd64
+    osx-amd64: sha256:4b4568fb5c6cbb8f1a8f640ff601c6d2bbecf9fa8f2cf796c7482e7054a01c41
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-win32.exe
+    win32: sha256:9500d0300e28a930ab3430a101ca940038b8e82ca441f5c9a1fddaa9d1b770df
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-win64.exe
+    win64: sha256:2e9cc54d0a5d098e2007decec1dbb3c555ca2f5aabded7aec907fe0ffe401aab
