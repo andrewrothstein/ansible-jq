@@ -1,11 +1,10 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs jq to /usr/local/bin
+  description: installs jq cli
   company: BlackRock
-  license:
-    - MIT
-  min_ansible_version: 2.0
+  license: MIT
+  min_ansible_version: '2.0'
   platforms:
     - name: Alpine
       verisions:
@@ -23,8 +22,8 @@ galaxy_info:
         - 9
     - name: Fedora
       versions:
-        - 37
         - 38
+        - 39
     - name: Ubuntu
       versions:
         - focal

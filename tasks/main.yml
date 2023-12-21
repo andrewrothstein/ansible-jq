@@ -1,25 +1,25 @@
 ---
-- name: mkdir {{ jq_target_dir }}
+- name: Mkdir {{ jq_target_dir }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     path: '{{ jq_target_dir }}'
     state: directory
-    mode: 0755
+    mode: '755'
 
-- name: downloading {{ jq_url }} to {{ jq_exe }}
+- name: Downloading {{ jq_url }} to {{ jq_exe }}
   become: true
   become_user: root
-  get_url:
+  ansible.builtin.get_url:
     url: '{{ jq_url }}'
     dest: '{{ jq_exe }}'
     checksum: '{{ jq_checksum }}'
-    mode: 0755
+    mode: '755'
 
-- name: linking {{ jq_link }} to {{ jq_exe }}
+- name: Linking {{ jq_link }} to {{ jq_exe }}
   become: true
   become_user: root
-  file:
+  ansible.builtin.file:
     src: '{{ jq_exe }}'
     dest: '{{ jq_link }}'
     state: link

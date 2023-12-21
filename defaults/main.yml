@@ -1,40 +1,98 @@
 ---
 jq_mirror: https://github.com/stedolan/jq/releases/download
-jq_ver: '1.7'
-jq_platform: linux64
+jq_ver: '1.7.1'
+jq_arch_map:
+  aarch64: arm64
+  arm64: arm64
+  x86_64: amd64
 jq_install_dir: /usr/local/bin
 
 jq_checksums:
-  '1.5':
-    # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux32
-    linux32: sha256:ab440affb9e3f546cf0d794c0058543eeac920b0cd5dff660a2948b970beb632
-    # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-linux64
-    linux64: sha256:c6b3a7d7d3e7b70c6f51b706a3b90bd01833846c54d32ca32f0027f00226ff6d
-    # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-osx-amd64
-    osx-amd64: sha256:386e92c982a56fe4851468d7a931dfca29560cee306a0e66c6a1bd4065d3dac5
-    # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-win32.exe
-    win32: sha256:1860c77bc2816b74f91705b84c7fa0dad3a062b355f021aa8c8e427e388e23fc
-    # https://github.com/stedolan/jq/releases/download/jq-1.5/jq-win64.exe
-    win64: sha256:ebecd840ba47efbf66822868178cc721a151060937f7ac406e3d31bd015bde94
-  '1.6':
-    # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux32
-    linux32: sha256:319af6123aaccb174f768a1a89fb586d471e891ba217fe518f81ef05af51edd9
-    # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-    linux64: sha256:af986793a515d500ab2d35f8d2aecd656e764504b789b66d7e1a0b727a124c44
-    # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64
-    osx-amd64: sha256:5c0a0a3ea600f302ee458b30317425dd9632d1ad8882259fcaf4e9b868b2b1ef
-    # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win32.exe
-    win32: sha256:0012cb4c0eb6eaf97b842e676e423a69a8fea95055d93830551b4a5a54494bd8
-    # https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe
-    win64: sha256:a51d36968dcbdeabb3142c6f5cf9b401a65dc3a095f3144bd0c118d5bb192753
+  # https://github.com/stedolan/jq/releases/download/jq-1.7/sha256sum.txt
   '1.7':
-    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux32
-    linux32: sha256:6e8f12833541c5cff94c556d72c12585821fb68bcf09acef56c854d107fd5a6e
-    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux64
-    linux64: sha256:2f312b9587b1c1eddf3a53f9a0b7d276b9b7b94576c85bda22808ca950569716
-    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-osx-amd64
-    osx-amd64: sha256:4b4568fb5c6cbb8f1a8f640ff601c6d2bbecf9fa8f2cf796c7482e7054a01c41
-    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-win32.exe
-    win32: sha256:9500d0300e28a930ab3430a101ca940038b8e82ca441f5c9a1fddaa9d1b770df
-    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-win64.exe
-    win64: sha256:2e9cc54d0a5d098e2007decec1dbb3c555ca2f5aabded7aec907fe0ffe401aab
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-amd64
+    linux-amd64: sha256:2f312b9587b1c1eddf3a53f9a0b7d276b9b7b94576c85bda22808ca950569716
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-arm64
+    linux-arm64: sha256:ab57ee39075db4a23f899d396ecef3c6e58f6aada35bfee472468210bd126940
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-armel
+    linux-armel: sha256:5f9129fffb49ff28a3f66a337dcff83a846146ad16a52784c1bcc3e5f26f3173
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-armhf
+    linux-armhf: sha256:dd9786221a3a0f250ed227706b7300a69579529ac4a059c874c35a9efead68b1
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-i386
+    linux-i386: sha256:6e8f12833541c5cff94c556d72c12585821fb68bcf09acef56c854d107fd5a6e
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mips
+    linux-mips: sha256:1a2a5f3706bf1d192577c34e260ff1550c24d8a93d2aabb64e46c29acd6847a1
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mips64
+    linux-mips64: sha256:7b344267ba082af3b585ba552c0597a15cc76eca682a0cce4324e947f1cb078c
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mips64el
+    linux-mips64el: sha256:3fb0c8890d4c07a22e47d3c794aa019df72880a5b84dcd2c2d2cf95eb16dc837
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mips64r6
+    linux-mips64r6: sha256:f4a06ca04d946f736f3754bc9a89cbfea79fbccc82b731a7816554f242357cd4
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mips64r6el
+    linux-mips64r6el: sha256:08015dd24bf546285881a423d582accc0d653b61aa9b99a1399e1d2f25308d57
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mipsel
+    linux-mipsel: sha256:22dfcbd361c7fb672b6cb7e6aa47fdb73ca54ae27fa9a0127e291a80ec2e64e7
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mipsr6
+    linux-mipsr6: sha256:319253ef37d3df187057f6cc99803bd03f234dbaf575efd74d1542ce800ebd6e
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-mipsr6el
+    linux-mipsr6el: sha256:badb7001ba7e4b9f13a95d65f150d35489904381a3cab415459d0e7e7b788ec9
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-powerpc
+    linux-powerpc: sha256:3f7b76dc415ebae4208bca4d031cd91362c12f302c56c2de07379295502d6fe8
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-ppc64el
+    linux-ppc64el: sha256:2157b08ad830c013346ee70edabcfb0a21bbd62d2c470423d1aa636ddd51764f
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-riscv64
+    linux-riscv64: sha256:ae5f88513882250066e5773e7dff5b54e78b28493b669e7e4d29352339a204d5
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-linux-s390x
+    linux-s390x: sha256:60fee34cc93b29905e2f27b713bf95709b97df5845b64cd1541bee461eb0bf81
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-macos-amd64
+    macos-amd64: sha256:4b4568fb5c6cbb8f1a8f640ff601c6d2bbecf9fa8f2cf796c7482e7054a01c41
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-macos-arm64
+    macos-arm64: sha256:b8d313fd4f3bd8a0b338b9ddd1c006fccf9312dc609a20d2d6e4bad964aa99f9
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-windows-amd64.exe
+    windows-amd64: sha256:2e9cc54d0a5d098e2007decec1dbb3c555ca2f5aabded7aec907fe0ffe401aab
+    # https://github.com/stedolan/jq/releases/download/jq-1.7/jq-windows-i386.exe
+    windows-i386: sha256:9500d0300e28a930ab3430a101ca940038b8e82ca441f5c9a1fddaa9d1b770df
+  # https://github.com/stedolan/jq/releases/download/jq-1.7.1/sha256sum.txt
+  '1.7.1':
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-amd64
+    linux-amd64: sha256:5942c9b0934e510ee61eb3e30273f1b3fe2590df93933a93d7c58b81d19c8ff5
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-arm64
+    linux-arm64: sha256:4dd2d8a0661df0b22f1bb9a1f9830f06b6f3b8f7d91211a1ef5d7c4f06a8b4a5
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-armel
+    linux-armel: sha256:d6b86023e0848c93a618a74b6fd741ce62f5d557fd3c2c1d7870663713b2c174
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-armhf
+    linux-armhf: sha256:46d18f115cca638efed22b90342d52a84a25ab1bef570551d3a16f7eb065c298
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-i386
+    linux-i386: sha256:bc473fd4b385789e9ce3d02a4c8df74dc988a34b20fe4e1a80da997eb360b599
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mips
+    linux-mips: sha256:5b7c362a354dda4f91bbfd26f7ed92c7cf7ceac28c022b1579c7c228149b55d2
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mips64
+    linux-mips64: sha256:3d4b43d0ab571431fdfc786f951a0547a05f75aed5c076409ed2cb58b7244de1
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mips64el
+    linux-mips64el: sha256:604f5a87da0e17a1e8c12422eeacb47e93e3eca60c8fe17a35fbc629d425bdca
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mips64r6
+    linux-mips64r6: sha256:21de7590f4bfa078514a6d3186bd68746fe331eca4807d6ca0299fbba2d2212e
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mips64r6el
+    linux-mips64r6el: sha256:30ce843d9910925f6ff3417ff13db469b5a73a2d727700cb4c3c12de8665c1be
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mipsel
+    linux-mipsel: sha256:5174f769b2a8a111743e316778aeb88ae4f8cada0caacb5c93ce6baf9287dcc5
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mipsr6
+    linux-mipsr6: sha256:f6d4a65deb9002cb59c00e80af6314846d2229ecafee53449228197f7b8d28ea
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-mipsr6el
+    linux-mipsr6el: sha256:e88b5bda2d0df0257033477fe53eb8544fb44c8275c814d4279ab7dab84b2e51
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-powerpc
+    linux-powerpc: sha256:761a9b3ad168e4ed0413c795f5546725be3ef1e1a11951f755524dc3f4a6442d
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-ppc64el
+    linux-ppc64el: sha256:758841de8a905dd82cb036c9ff6fd6e598549c6f6106fe61795797ac87551af5
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-riscv64
+    linux-riscv64: sha256:04426a00def567398f6190e830b35e026fbda2ea75157fac98e41b622832ff2b
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-linux-s390x
+    linux-s390x: sha256:868b7c3ca74224a02ddb613261ddfc2e43b12daaedd5eb58373dbdc7f2c5f924
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-macos-amd64
+    macos-amd64: sha256:4155822bbf5ea90f5c79cf254665975eb4274d426d0709770c21774de5407443
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-macos-arm64
+    macos-arm64: sha256:0bbe619e663e0de2c550be2fe0d240d076799d6f8a652b70fa04aea8a8362e8a
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-windows-amd64.exe
+    windows-amd64: sha256:7451fbbf37feffb9bf262bd97c54f0da558c63f0748e64152dd87b0a07b6d6ab
+    # https://github.com/stedolan/jq/releases/download/jq-1.7.1/jq-windows-i386.exe
+    windows-i386: sha256:e4efdd6a2c463ae714ed98fd5e874fe834a3a2380e17885bd4cda1c49e5166df

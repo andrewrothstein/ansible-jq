@@ -1,5 +1,8 @@
 ---
-jq_bin: jq-{{ jq_platform }}
+jq_os: '{{ ansible_system | lower }}'
+jq_arch: '{{ jq_arch_map[ansible_architecture] }}'
+jq_platform: '{{ jq_os }}-{{ jq_arch }}'
+jq_bin: jq-{{ jq_platform }}{{ jq_dotexe | default("") }}
 jq_checksum: '{{ jq_checksums[jq_ver][jq_platform] }}'
 jq_url: '{{ jq_mirror }}/jq-{{ jq_ver }}/{{ jq_bin }}'
 jq_target_dir: '{{ jq_install_dir }}/jq-{{ jq_ver }}'
