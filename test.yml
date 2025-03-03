@@ -1,12 +1,14 @@
 ---
-- hosts: all
+- name: Testing andrewrothstein.jq
+  hosts: all
   tasks:
-    - ansible.builtin.include_role:
+    - name: Installing andrewrothstein.jq
+      ansible.builtin.include_role:
         name: '{{ playbook_dir }}'
-      name: Install jq
-    - ansible.builtin.command: /usr/local/bin/jq --version
-      name: Execute jq --version
+    - name: Execute 'jq --version'
+      ansible.builtin.command: jq --version
+      changed_when: false
       register: jq_test_output
-    - ansible.builtin.debug:
+    - name: Output from 'jq --version'
+      ansible.builtin.debug:
         msg: '{{ jq_test_output.stdout }}'
-      name: jq --version
