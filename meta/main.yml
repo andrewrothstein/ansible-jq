@@ -1,16 +1,19 @@
 ---
 galaxy_info:
   author: Andrew Rothstein
-  description: installs jq cli
   company: BlackRock
+  description: installs jq cli
+  galaxy_tags:
+    - development
   license: MIT
   min_ansible_version: '2.0'
+  namespace: andrewrothstein
   platforms:
     - name: Alpine
-      verisions:
+      versions:
         - all
-    - name: Archlinux
-      verisions:
+    - name: ArchLinux
+      versions:
         - all
     - name: Debian
       versions:
@@ -18,16 +21,14 @@ galaxy_info:
         - bullseye
     - name: EL
       versions:
-        - 8
-        - 9
+        - '8'
+        - '9'
     - name: Fedora
       versions:
-        - 38
-        - 39
+        - '40'
+        - '41'
     - name: Ubuntu
       versions:
-        - focal
         - jammy
-  galaxy_tags:
-    - development
+        - noble
   role_name: jq
