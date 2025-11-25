@@ -1,6 +1,6 @@
 ---
-jq_os: '{{ ansible_system | lower }}'
-jq_arch: '{{ jq_arch_map[ansible_architecture] }}'
+jq_os: '{{ ansible_facts["system"] | lower }}'
+jq_arch: '{{ jq_arch_map[ansible_facts["architecture"]] }}'
 jq_platform: '{{ jq_os }}-{{ jq_arch }}'
 jq_bin: jq-{{ jq_platform }}{{ jq_dotexe | default("") }}
 jq_checksum: '{{ jq_checksums[jq_ver][jq_platform] }}'
