@@ -51,4 +51,4 @@ dl_ver() {
     dl $ver $lchecksums windows i386 .exe
 }
 
-dl_ver ${1:-1.8.1}
+dl_ver ${1:-1.8.2}
